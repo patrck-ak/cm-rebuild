@@ -16,12 +16,11 @@ function App() {
   };
 
   return (
-    <>
+    <ThemeProvider theme={theme == "Dark" ? Dark : Light}>
       <button onClick={() => toggleTheme()}>tema</button>
       <Global />
       <Outlet />
-      <ThemeProvider theme={theme == "Dark" ? Dark : Light}></ThemeProvider>
-    </>
+    </ThemeProvider>
   );
 }
 export default App;
